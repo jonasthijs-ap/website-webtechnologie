@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+    <head>
+        <!-- Title and Icon -->
+        <title>Webshop | Geocaching Hobby</title>
+        <link rel="icon" href="assets/images/general/favicon.svg" data-citation="self-made" />
+        
+        <!-- Metadata -->
+        <meta charset="UTF-8" />
+        <meta name="description" content="Interesse in geocaching-producten? Kijk dan zeker eens op onze webshop!" />
+        <meta name="keywords" content="Geocaching,AP,Jonas,Thijs,Hobby" />
+        <meta name="author" content="Jonas Thijs" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/onderdelen.css" />
+        <link rel="stylesheet" href="css/shop.css" />
+
+        <!-- Scripts -->
+        <script src="js/shop.js" defer></script>
+        <script src="js/comments.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <img src="assets/images/onderdeel_shop/sfeerbeeld.jpg" alt="sfeerbeeld van de webshop-pagina" class="atmospheric-image" data-citation="free-license" />
+            <h1>webshop</h1>
+        </header>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html"><img src="assets/images/general/logo.svg" alt="logo van de website" class="navbar-logo" data-citation="self-made" /></a></li>
+                <li><a href="index.html">home</a></li>
+                <li><a href="hobby.html">geocaching</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+            <form>
+                <input type="search" placeholder="website doorzoeken" />
+            </form>
+        </nav>
+        <main>
+            <section>
+                <h2>Welkom op onze webshop</h2>
+                <div class="article-block">
+                    <article>
+                        <div class="text-block">
+                            <p>Ben je &ldquo;verkocht&rdquo; geraakt aan geocaching en wil je graag ermee starten? Of ben je een oude rot in het vak en ben je geïnteresseerd om je gear te vernieuwen of uit te breiden? Dan ben je bij ons aan het juiste adres!</p>
+                            <p>In onze webshop kan je alvast je (nieuwe) hobby een boost geven met materiële benodigdheden.</p>
+                        </div>
+                    </article>
+                    <form id="shop">
+                        <article class="shop-item">
+                            <img src="assets/images/onderdeel_shop/artikel_gps.png" alt="gps van het merk garmin" data-citation="yes" data-source-ref="https://shop.geocaching.com/default/geocaching-gear/gps-devices/garmin-etrexr-22x-handheld-gps.html" />
+                            <div class="article-info">
+                                <div class="shop-item-upper-group">
+                                    <h3>Garmin eTrex 22 <abbr title="Global Positioning System">GPS</abbr></h3>
+                                    <input type="number" class="shop-quantity" id="shop-quantity-item-1" min="1" value="1" />
+                                </div>
+                                <h4>&euro; 229,99</h4>
+                                <ul>
+                                    <li>2,2 inch scherm, leesbaar in het zonlicht, 240 x 320 resolutie.</li>
+                                    <li>8 <abbr title="GigaByte">GB</abbr> intern geheugen, uitbreiden mogelijk via Micro<abbr title="Secure Digital">SD</abbr>.</li>
+                                    <li>Batterijduur: tot 25 uur, herlaadbaar met 2 AA-batterijen.</li>
+                                </ul>
+                                <button class="shop-submit button" id="shop-submit-item-1" value="229.99">bestellen</button>
+                            </div>
+                        </article>
+                        <article class="shop-item">
+                            <img src="assets/images/onderdeel_shop/artikel_logrolletjes.png" alt="geocaching logrolletjes" data-citation="yes" data-source-ref="https://shop.geocaching.com/default/geocaching-supplies/logbooks/micro-log-strips-5-pack-english.html" />
+                            <div class="article-info">
+                                <div class="shop-item-upper-group">
+                                    <h3>5 Officiële logrolletjes (micro-formaat)</h3>
+                                    <input type="number" class="shop-quantity" id="shop-quantity-item-2" min="1" value="1" />
+                                </div>
+                                <h4>&euro; 2,99</h4>
+                                <ul>
+                                    <li>Vijf logrolletjes voor in een micro-cache.</li>
+                                    <li>Waterbestendig papier, ideaal voor het plaatsen van een geocache in een nat gebied.</li>
+                                    <li>Als het papier droog is, kan het met bijna elk object beschreven worden (indien pen vergeten).</li>
+                                </ul>
+                                <button class="shop-submit button" id="shop-submit-item-2" value="2.99">bestellen</button>
+                            </div>
+                        </article>
+                        <article class="shop-item">
+                            <img src="assets/images/onderdeel_shop/artikel_trackable-sticker.jpg" alt="officiële geocaching trackable sticker" data-citation="yes" data-source-ref="https://www.geocachingshop.nl/en/travel-bug-sticker-85-cm-black-with-reflective" />
+                            <div class="article-info">
+                                <div class="shop-item-upper-group">
+                                    <h3>Officiële Trackable sticker</h3>
+                                    <input type="number" class="shop-quantity" id="shop-quantity-item-3" min="1" value="1" />
+                                </div>
+                                <h4>&euro; 9,95</h4>
+                                <ul>
+                                    <li>Reflecterende autosticker met trackable.</li>
+                                    <li>Trackable is volledig functioneel en is traceerbaar de officiële <a href="https://www.geocaching.com" target="_blank">Geocaching-website</a>.</li>
+                                    <li>Afmetingen zijn 7,5 x 3 cm.</li>
+                                </ul>
+                                <button class="shop-submit button" id="shop-submit-item-3" value="9.95">bestellen</button>
+                            </div>
+                        </article>
+                        <article class="shop-item">
+                            <img src="assets/images/onderdeel_shop/artikel_uv-lamp.jpg" alt="uv zaklamp" data-citation="yes" data-source-ref="https://www.geocachingshop.nl/nl/uv-lamp-21-led-zwart" />
+                            <div class="article-info">
+                                <div class="shop-item-upper-group">
+                                    <h3>UV zaklamp</h3>
+                                    <input type="number" class="shop-quantity" id="shop-quantity-item-4" min="1" value="1" />
+                                </div>
+                                <h4>&euro; 16,95</h4>
+                                <ul>
+                                    <li>Merk: Geodox</li>
+                                    <li><abbr title="Ultra Violet">UV</abbr> zaklamp, ideaal voor het vinden van verborgen boodschappen.</li>
+                                    <li>UV verf of stift licht op wanneer de lamp er op schijnt.</li>
+                                    <li>Kan tot 8 uur branden, werkt op 3 AAA-batterijen.</li>
+                                </ul>
+                                <button class="shop-submit button" id="shop-submit-item-4" value="16.95">bestellen</button>
+                            </div>
+                        </article>
+                        <article class="shop-item">
+                            <img src="assets/images/onderdeel_shop/artikel_travel-bug.jpg" alt="geocaching travel bug plaatje" data-citation="yes" data-source-ref="https://www.geocachingshop.nl/nl/travel-bug-1-setje" />
+                            <div class="article-info">
+                                <div class="shop-item-upper-group">
+                                    <h3>Officieel Travel Bug plaatje</h3>
+                                    <input type="number" class="shop-quantity" id="shop-quantity-item-5" min="1" value="1" />
+                                </div>
+                                <h4>&euro; 6,50</h4>
+                                <ul>
+                                    <li>Officieel Travel Bug plaatje, voorzien van trackable code.</li>
+                                    <li>Ieder willekeurig item kan er aan verbonden worden.</li>
+                                    <li>Traceerbaar via de officiële website van <a href="https://www.geocaching.com" target="_blank">Geocaching</a>.</li>
+                                </ul>
+                                <button class="shop-submit button" id="shop-submit-item-5" value="6.50">bestellen</button>
+                            </div>
+                        </article>
+                        <article class="shop-item">
+                            <img src="assets/images/onderdeel_shop/artikel_geocache-container.jpg" alt="geocaching container (small-formaat)" data-citation="yes" data-source-ref="https://shop.geocaching.com/default/geocaching-supplies/cache-containers/xl-capsule-geocache-dark-camo.html" />
+                            <div class="article-info">
+                                <div class="shop-item-upper-group">
+                                    <h3>Geocacing container (small-formaat)</h3>
+                                    <input type="number" class="shop-quantity" id="shop-quantity-item-6" min="1" value="1" />
+                                </div>
+                                <h4>&euro; 13,50</h4>
+                                <ul>
+                                    <li>Met legerprint gecamoufleerde geocache, ideaal voor in het bos.</li>
+                                    <li>Heeft een schroefdop met waterdichte rand.</li>
+                                    <li>De geocache heeft een &lsquo;small&rsquo;-formaat.</li>
+                                </ul>
+                                <button class="shop-submit button" id="shop-submit-item-6" value="13.50">bestellen</button>
+                            </div>
+                        </article>
+                    </form>
+                </div>
+            </section>
+            <hr />
+            <section id="comments">
+                <h2>Geef uw opmerkingen</h2>
+                <form id="comment-form">
+                    <input type="text" placeholder="gebruikersnaam" />
+                    <input type="email" placeholder="e-mailadres" />
+                    <textarea placeholder="typ hier uw opmerking..."></textarea>
+                    <button id="publish" class="button small">Publiceren</button>
+                    <p id="error-message"></p>
+                </form>
+            </section>
+        </main>
+        <aside>
+            <section>
+                <article id="shopping-cart">
+                    <h4>Winkel<wbr />mandje</h4>
+                    <span><label form="shop">Aantal items: </label><output form="shop" id="number-of-items">0</output></span>
+                    <span><label form="shop">Totaalprijs: </label><output form="shop" id="total-price">&euro;&nbsp;0,00</output></span>
+                </article>
+                <nav class="sub-nav">
+                    <h4>Onderdeel-pagina's</h4>
+                    <ul>
+                        <li><a href="onderdeel_wat-zijn-geocaches.html">Wat zijn geocaches?</a></li>
+                        <li><a href="onderdeel_trackables.html">Trackables</a></li>
+                        <li><a href="onderdeel_events.html">Events</a></li>
+                        <li><a href="onderdeel_manieren-om-te-geocachen.html">Manieren om te geocachen</a></li>
+                        <li><a href="onderdeel_toebehoren.html">Toebehoren bij het geocachen</a></li>
+                        <li><a href="onderdeel_shop.html">Webshop</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </aside>
+        <footer>
+            <section class="like-panel">
+                <h5>Vind je deze pagina leuk? <button class="like-panel-button" id="like-panel-yes"><span>👍</span></button><button class="like-panel-button" id="like-panel-no"><span>👎</span></button></h5>
+            </section>
+            <section class="footer-info">
+                <article>
+                    <h4>Auteur</h4>
+                    <a href="https://jonasthijs.be" target="_blank">Jonas Thijs</a>
+                </article>
+                <article>
+                    <h4>Webdesign</h4>
+                    <a href="https://jonasthijs.be" target="_blank">Jonas Thijs</a>
+                </article>
+                <article>
+                    <h4>Met dank aan</h4>
+                    <a href="https://ap.be" target="_blank">AP Hogeschool</a>
+                </article>
+            </section>
+            <section class="footer-bottom">
+                <h5>&copy; 2022&ensp;&ndash;&ensp;Jonas Thijs&ensp;&ndash;&ensp;G_1PRO_D4&ensp;@&ensp;AP Hogeschool</h5>
+            </section>
+        </footer>
+    </body>
+</html>

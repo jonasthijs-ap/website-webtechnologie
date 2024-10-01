@@ -1,0 +1,181 @@
+/* PAGE-SPECIFIC STYLES FOR 'hobby.html' */
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+main section h2 {
+    text-align: center;
+    margin-bottom: 75px;
+    flex-basis: 100%;
+}
+
+main section div {
+    display: flex;
+    justify-content: center;
+    gap: 7.5%;
+    flex-basis: 100%;
+    margin-bottom: 75px;
+}
+
+main section div article a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-decoration: none;
+}
+
+main section div article a h3 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+main section div article a p, main section.third-row a p {
+    font-family: "Open Sans Medium";
+    font-size: 0.85rem;
+    text-align: center;
+    color: var(--color-black);
+    margin-top: 10px;
+    line-height: 12.5pt;
+}
+
+main section div.first-row article {
+    width: 350px;
+}
+
+main section div.second-row article {
+    width: 500px;
+}
+
+main section div.first-row article a img {
+    object-fit: cover;
+    height: 175px;
+}
+
+main section div.second-row article a img {
+    object-fit: cover;
+    height: 215px;
+}
+
+main section div article a img, main section div article a p {
+    width: 80%;
+}
+
+main section.third-row {
+    display: flex;
+    justify-content: center;
+}
+
+main section.third-row h2 {
+    margin-bottom: 40px;
+}
+
+main section.third-row a {
+    display: flex;
+    flex-basis: 500px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-decoration: none;
+}
+
+main section.third-row a > * {
+    flex-basis: 100%;
+}
+
+main section.third-row a img {
+    object-fit: cover;
+    width: 500px;
+    height: 300px;
+}
+
+/* MEDIA-QUERIES */
+@media only screen and (max-width: 1200px) {
+    main section div.first-row {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    main section div.second-row {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    main section div article {
+        flex-basis: 400px !important;
+    }
+
+    main section div article img {
+        height: 175px !important;
+    }
+
+    main section div.second-row article {
+        text-align: center;
+    }
+
+    main section div.second-row article:first-child h3 {
+        margin-bottom: calc(15px + 24px);
+    }
+
+    main section.third-row a {
+        flex-basis: 320px;
+    }
+
+    main section.third-row a > * {
+        flex-basis: 320px;
+    }
+
+    main section.third-row a img {
+        height: 175px !important;
+    }
+}
+
+@media only screen and (max-width: 989px) {
+    main section div {
+        margin-bottom: 50px !important;
+        gap: 50px !important;
+    }
+    
+    main section div.second-row article:first-child h3 {
+        margin-bottom: 15px;
+    }
+
+    section.third-row {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    main section {
+        width: 100%;
+    }
+
+    main section img {
+        width: 100% !important;
+    }
+
+    main section div {
+        width: inherit;
+    }
+
+    main section div.first-row article,
+    main section div.second-row article {
+        flex-basis: 80% !important;
+        width: auto;
+    }
+
+    section.third-row a {
+        flex-basis: 80% !important;
+    }
+
+    section.third-row a > * {
+        flex-basis: 80% !important;
+    }
+}

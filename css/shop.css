@@ -1,0 +1,201 @@
+/* PAGE-SPECIFIC STYLES FOR 'onderdeel_shop.html' */
+
+:root {
+    --color-shadow: #AAAAAA;
+}
+
+article.shop-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 70%;
+}
+
+article.shop-item > * {
+    width: auto;
+}
+
+article.shop-item img {
+    object-fit: contain;
+    width: 50%;
+}
+
+article.shop-item div.article-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-self: center;
+    gap: 25px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+article.shop-item div.shop-item-upper-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+article.shop-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0 !important;
+    flex-basis: 60%;
+}
+
+input.shop-quantity {
+    width: 45px;
+    align-self: center;
+    height: 30px;
+    padding: 5px 0 5px 10px;
+    box-sizing: border-box;
+    font-family: "Open Sans Light";
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    background-color: var(--color-lightgray);
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 5px;
+    transition: border 0.25s;
+}
+
+input.shop-quantity::-webkit-inner-spin-button,
+input.shop-quantity::-webkit-outer-spin-button {
+    opacity: 1;
+    cursor: pointer;
+}
+
+article.shop-item h4 {
+    font-size: 0.9rem;
+    margin-top: 0 !important;
+}
+
+article.shop-item ul li {
+    font-size: 0.75rem;
+}
+
+article.shop-item ul li a {
+    text-decoration: none;
+    color: var(--color-accent);
+}
+
+article.shop-item button.shop-submit {
+    width: 100%;
+    margin: unset;
+}
+
+/* SHOP-INFO (aside) */
+
+aside section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: sticky;
+    top: 150px;
+    gap: 50px;
+}
+
+aside section article#shopping-cart {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: var(--color-lightgray);
+}
+
+aside section article#shopping-cart h4 {
+    color: var(--color-primary);
+    text-transform: uppercase;
+    font-size: 1.15rem;
+    width: fit-content;
+}
+
+aside section article#shopping-cart span {
+    font-family: "Open Sans Regular";
+    font-size: 0.9rem;
+}
+
+aside section article#shopping-cart label {
+    font-family: "Open Sans Medium";
+}
+
+aside nav.sub-nav {
+    position: static;
+    top: unset;
+}
+
+/* MEDIA-QUERIES */
+
+@media only screen and (max-width: 1200px) {
+    article.shop-item {
+        flex-wrap: wrap;
+    }
+
+    article.shop-item img,
+    article.shop-item div.article-info {
+        flex-basis: 100%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    main form#shop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    aside {
+        position: sticky;
+        top: -200px;
+    }
+
+    aside section {
+        position: static;
+        top: unset;
+        flex-direction: column-reverse;
+    }
+
+    aside nav.sub-nav {
+        padding-bottom: unset;
+    }
+
+    aside section article#shopping-cart {
+        margin: 0 75px;
+        background-color: var(--color-lightgray-opacity);
+        backdrop-filter: blur(5px);
+    }
+}
+
+@media only screen and (max-width: 829px) {
+    aside {
+        top: -300px;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    article.shop-item {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 532px) {
+    aside {
+        top: -325px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    aside {
+        top: -300px;
+    }
+
+    aside section {
+        margin-bottom: 25px;
+    }
+    aside section article#shopping-cart {
+        margin: 0 25px;
+    }
+}

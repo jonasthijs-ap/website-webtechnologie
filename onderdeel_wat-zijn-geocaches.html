@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+    <head>
+        <!-- Title and Icon -->
+        <title>Wat zijn geocaches? | Geocaching Hobby</title>
+        <link rel="icon" href="assets/images/general/favicon.svg" data-citation="self-made" />
+        
+        <!-- Metadata -->
+        <meta charset="UTF-8" />
+        <meta name="description" content="Welke soorten geocaches zijn er, wat zijn haar eigenschappen en hoe verstop je een geocache? De antwoorden vind je hier." />
+        <meta name="keywords" content="Geocaching,AP,Jonas,Thijs,Hobby" />
+        <meta name="author" content="Jonas Thijs" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Libraries -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />   <!-- LEAFLET.CSS -->
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" defer></script>       <!-- LEAFLET.JS -->
+        
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/onderdelen.css" />
+
+        <!-- Scripts -->
+        <script src="js/leaflet-map-geocache.js" defer></script>
+        <script src="js/comments.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <img src="assets/images/onderdeel_wat-zijn-geocaches/sfeerbeeld.jpg" alt="sfeerbeeld van de onderdeel-pagina over geocaches" class="atmospheric-image" data-citation="yes" data-source-ref="https://www.countryfile.com/how-to/outdoor-skills/guide-to-geocaching-what-is-it-and-how-to-get-started/" />
+            <h2 class="small-heading">wat zijn</h2>
+            <h1 class="offset-heading">geocaches</h1>
+        </header>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html"><img src="assets/images/general/logo.svg" alt="logo van de website" class="navbar-logo" data-citation="self-made" /></a></li>
+                <li><a href="index.html">home</a></li>
+                <li><a href="hobby.html">geocaching</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+            <form>
+                <input type="search" placeholder="website doorzoeken" />
+            </form>
+        </nav>
+        <main>
+            <section>
+                <h2>Soorten geocaches</h2>
+                <div class="article-block">
+                    <article>
+                        <p>Als je aan geocaching denkt, denk je misschien meteen aan één enkele geocache die autonoom is en waarbij je slechts naar één doosje zoekt. Of misschien denk je dat het enkel fysieke schatten zijn? Dit is echter niet altijd het geval. Er zijn namelijk véél verschillende soorten geocaches. (de event-cachetypes zijn terug te vinden op de Events-pagina) Hieronder een lijstje:</p>
+                    </article>
+                    <article>
+                        <h3>Fysieke geocaches</h3>
+                        <dl>
+                            <div class="def-group">
+                                <dt>Traditionele geocaches</dt>
+                                <dd>Dit zijn de standaard geocaches. Ze worden getoond als een groen icoontje op de kaart en zijn het meest populaire geocachetype. Ze bevatten slechts één waypoint.</dd>
+                            </div>
+                            <div class="def-group">
+                                <dt>Multi-caches</dt>
+                                <dd>Dit zijn geocaches die meerdere waypoints bevatten. Je kan dus een wandeling hebben van bijvoorbeeld 10 punten en een eind-geocache. Op deze punten worden er meestal vragen gesteld die opgelost moeten worden, om hier dan later een coördinaat uit te halen. Dit geocachetype wordt gekenmerkt door een oranje icoontje op de kaart.</dd>
+                            </div>
+                            <div class="def-group">
+                                <dt>Mystery caches</dt>
+                                <dd>Dit zijn geocaches waarbij eerst een (digitale) puzzel moet opgelost worden, alvorens de coördinaten van de geocache verkregen kunnen worden. Ze kunnen op de kaart teruggevonden worden met een donkerblauw icoontje met een vraagteken in.</dd>
+                            </div>
+                        </dl>
+                    </article>
+                    <article>
+                        <h3>Virtuele geocaches</h3>
+                        <dl>
+                            <div class="def-group">
+                                <dt>Virtuele geocaches</dt>
+                                <dd>Dit soort geocache heeft geen fysieke elementen, maar wel (meestal) een vraag of meerdere vragen die opgelost moeten worden en naar de eigenaar moeten worden doorgestuurd ter controle. Er wordt meestal gevraagd om een foto te trekken als bewijs dat je op de plaats geweest bent. Dit cachetype wordt gekenmerkt met een lichtblauw icoontje met een spookje in.</dd>
+                            </div>
+                            <div class="def-group">
+                                <dt>EarthCache</dt>
+                                <dd>Hierbij gelden dezelfde principes en regels als bij een gewone virtuele geocache, maar het verschil zit hem in het thema: een EarthCache draait volledig rond geologie. Er worden dus vaak EarthCaches gemaakt over rotsenformaties, getijden, polderlandschappen, enz… Dit soort geocache heeft een illustratie van een wereldbol als icoontje.</dd>
+                            </div>
+                        </dl>
+                    </article>
+                </div>
+            </section>
+            <section>
+                <h2>Hoe verstop je een geocache?</h2>
+                <article>
+                    <div class="text-block">
+                        <p>Bij het verstoppen van een geocache komt er veel werk en voorbereiding aan te pas. Zo moet je weten waar je hem wilt verstoppen, of de verstopplek ook toegankelijk is en of je permissie hebt.</p>
+                        <p>Daarnaast is het ook van groot belang om jezelf af te vragen wat de eigenlijke reden is dat je de geocache wil verstoppen (op die plek). Wil je graag iets vertellen over de locatie of gaat het echt over de geocache zelf en is dit hiervoor dé geschikte plek?</p>
+                    </div>
+                    <blockquote cite="https://www.geocaching.com/play/guidelines#:~:text=Als%20je%20een,briansnat%2C%20Charterlid">
+                        <q>Als je een geocache gaat plaatsen, denk dan aan de reden waarom je mensen naar die plek brengt. Als de enige reden de geocache is, zoek dan een betere plek.</q>
+                        <p class="author">&mdash; Briansnat, Charterlid</p>
+                    </blockquote>
+                    <div id="firstGeocacheMap" class="leaflet-map"></div>
+                </article>
+            </section>
+            <section>
+                <h2>De eigenschappen van een geocache</h2>
+                <div class="article-block">
+                    <article>
+                        <p>Bij het aanmaken van een nieuwe listing op de Geocaching-site, moet je bepaalde eigenschappen meegeven. Deze zijn erg belangrijk bij bijvoorbeeld het filteren van geocaches of tijdens het zoekwerk, zodat men weet waarnaar ze moeten zoeken.</p>
+                        <figure>
+                            <img src="assets/images/onderdeel_wat-zijn-geocaches/geocaching_sizes.jpg" alt="geocaching sizes" data-citation="yes" data-source-ref="https://forums.geocaching.com/GC/index.php?/topic/346173-suggestion-new-more-useful-attributes/#:~:text=When%20you%20submit,including%20GPS%20users." />
+                            <figcaption>Geocaching container groottes</figcaption>
+                        </figure>
+                    </article>
+                    <article>
+                        <h3>Moeilijkheid en terrein</h3>
+                        <div class="text-block">
+                            <p>De moeilijkheid en het terrein van een geocache gaan beiden van 1 ster tot 5 sterren, telkens met een halve ster tussensprong. Deze beide pijlers geven een goede indicatie aan de zoeker dat hij wat er hem te wachten staat.</p>
+                            <p>De moeilijkheidscore van een geocache bepaalt hoe snel je hem zal vinden en hoeveel denkwerk er bij aan te pas komt.</p>
+                            <p>De terreinscore van een geocache bepaalt de lengte van de tocht, de toegankelijkheid en of je al dan niet speciale skills en tools nodig hebt, zoals bij boomklimmen bijvoorbeeld.</p>
+                        </div>
+                        <table>
+                            <caption>Overzichtstabel 'moeilijkheid en terrein'</caption>
+                            <thead>
+                                <tr>
+                                    <th>D/T</th>
+                                    <th>Difficulty</th>
+                                    <th>Terrain</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>D/T 1</th>
+                                    <td>zeer snel te vinden</td>
+                                    <td>zeer toegankelijk (zelfs voor rolstoelgebruikers)</td>
+                                </tr>
+                                <tr>
+                                    <th>D/T 2</th>
+                                    <td>na enige tijd te vinden</td>
+                                    <td>vergt kleine inspanning</td>
+                                </tr>
+                                <tr>
+                                    <th>D/T 3</th>
+                                    <td>denkwerk vaak nodig</td>
+                                    <td>uitdagende inspanning</td>
+                                </tr>
+                                <tr>
+                                    <th>D/T 4</th>
+                                    <td>complexe puzzel/moeilijk verstopt</td>
+                                    <td>bereiken van geocache is moeilijk/gevaarlijk</td>
+                                </tr>
+                                <tr>
+                                    <th>D/T 5</th>
+                                    <td>zeer complexe puzzel/zeer moeilijk verstopt</td>
+                                    <td>bereiken van geocache is zeer gevaarlijk zonder begeleiding of speciale uitrusting</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </div>
+            </section>
+            <hr />
+            <section id="comments">
+                <h2>Geef uw opmerkingen</h2>
+                <form id="comment-form">
+                    <input type="text" placeholder="gebruikersnaam" />
+                    <input type="email" placeholder="e-mailadres" />
+                    <textarea placeholder="typ hier uw opmerking..."></textarea>
+                    <button id="publish" class="button small">Publiceren</button>
+                    <p id="error-message"></p>
+                </form>
+            </section>
+        </main>
+        <aside>
+            <nav class="sub-nav">
+                <h4>Onderdeel-pagina's</h4>
+                <ul>
+                    <li><a href="onderdeel_wat-zijn-geocaches.html">Wat zijn geocaches?</a></li>
+                    <li><a href="onderdeel_trackables.html">Trackables</a></li>
+                    <li><a href="onderdeel_events.html">Events</a></li>
+                    <li><a href="onderdeel_manieren-om-te-geocachen.html">Manieren om te geocachen</a></li>
+                    <li><a href="onderdeel_toebehoren.html">Toebehoren bij het geocachen</a></li>
+                    <li><a href="onderdeel_shop.html">Webshop</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <footer>
+            <section class="like-panel">
+                <h5>Vind je deze pagina leuk? <button class="like-panel-button" id="like-panel-yes"><span>👍</span></button><button class="like-panel-button" id="like-panel-no"><span>👎</span></button></h5>
+            </section>
+            <section class="footer-info">
+                <article>
+                    <h4>Auteur</h4>
+                    <a href="https://jonasthijs.be" target="_blank">Jonas Thijs</a>
+                </article>
+                <article>
+                    <h4>Webdesign</h4>
+                    <a href="https://jonasthijs.be" target="_blank">Jonas Thijs</a>
+                </article>
+                <article>
+                    <h4>Met dank aan</h4>
+                    <a href="https://ap.be" target="_blank">AP Hogeschool</a>
+                </article>
+            </section>
+            <section class="footer-bottom">
+                <h5>&copy; 2022&ensp;&ndash;&ensp;Jonas Thijs&ensp;&ndash;&ensp;G_1PRO_D4&ensp;@&ensp;AP Hogeschool</h5>
+            </section>
+        </footer>
+    </body>
+</html>

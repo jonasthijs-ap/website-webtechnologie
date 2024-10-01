@@ -1,0 +1,443 @@
+/* PAGE-SPECIFIC STYLES FOR 'onderdeel_*.html'-pages */
+
+:root {
+    --color-like-btn-hover: #DEDEDE;
+    --color-bad: tomato;
+}
+
+body {
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+}
+
+header h2.small-heading {
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 3rem;
+    left: 75px;
+    color: var(--color-white);
+    bottom: 130px;
+    text-shadow: 0 0 25px var(--color-shadow);
+}
+
+/* MAIN */
+
+main section {
+    margin-top: 50px;
+}
+
+main section:first-child {
+    margin-top: 0;
+}
+
+figure {
+    max-width: 100%;
+    margin-top: 25px;
+}
+
+figure img {
+    max-width: inherit;
+}
+
+section article {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section article > * {
+    width: 70%;
+}
+
+article h4 {
+    margin-top: 10pt;
+    color: var(--color-accent);
+}
+
+article div.leaflet-map {
+    height: 300px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-family: "Open Sans Regular";
+    margin-top: 25px;
+}
+
+div.leaflet-map img {
+    border-radius: 0;
+}
+
+div.leaflet-map a {
+    text-decoration: none;
+    color: var(--color-accent);
+}
+
+div.leaflet-map div.leaflet-popup-content a {
+    font-family: "Open Sans SemiBold";
+}
+
+div.leaflet-map div.leaflet-popup-content p {
+    margin: 0;
+    margin-top: 10px;
+}
+
+article.special-placement > div.special-placement-block {
+    flex-basis: 55%;
+}
+
+article.special-placement figure {
+    margin: 0;
+    margin-left: 10%;
+    flex-basis: 25%;
+}
+
+/* COMMENTS-SECTION */
+
+main hr {
+    margin: 70px 0;
+    width: 70%;
+    border: none;
+    height: 1px;
+    background-color: var(--color-accent);
+}
+
+section#comments {
+    width: 70%;
+}
+
+section#comments form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.small {
+    flex-basis: auto !important;
+}
+
+section#comments form input,
+section#comments form button,
+section#comments form textarea {
+    flex-basis: 100%;
+    margin: unset;
+}
+
+section#comments form p#error-message {
+    color: var(--color-bad);
+}
+
+section#comments hr {
+    width: 100%;
+}
+
+article#published-comment,
+article#published-comment > * {
+    flex-basis: 100%;
+}
+
+article#published-comment h4 a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+article#published-comment h4 a:hover {
+    text-decoration: underline;
+}
+
+article#published-comment p {
+    margin-top: 25px;
+}
+
+/* ASIDE NAV-MENU */
+
+aside {
+    grid-area: aside;
+    width: calc(25vw - 75px);
+    height: calc(100% - 175px);
+    box-sizing: border-box;
+    margin-top: 75px;
+    margin-right: 75px;
+    z-index: 0;
+}
+
+aside nav.sub-nav {
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    position: sticky;
+    top: 150px;
+    z-index: 0;
+    height: auto;
+    padding: 0;
+    padding-left: 25px;
+    border-left: 1px solid var(--color-secondary);
+}
+
+aside nav.sub-nav > * {
+    flex-basis: 100%;
+}
+
+aside nav.sub-nav h4 {
+    color: var(--color-secondary);
+    margin-bottom: 7.5pt;
+}
+
+aside nav.sub-nav ul {
+    list-style-type: none;
+}
+
+aside nav.sub-nav ul li {
+    margin: 10pt 0;
+}
+
+aside nav.sub-nav ul li a {
+    font-family: "Open Sans Regular";
+    font-size: 0.85rem;
+    color: var(--color-black);
+    text-decoration: none;
+    transition: color 0.25s;
+}
+
+aside nav.sub-nav ul li a:hover {
+    color: var(--color-accent);
+}
+
+footer section.like-panel {
+    background-color: var(--color-white);
+    border-top: 3px solid var(--color-primary);
+    padding: 25px;
+}
+
+footer section.like-panel h5 {
+    font-family: "Open Sans SemiBold";
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button.like-panel-button {
+    height: 30px;
+    width: 30px;
+    color: var(--color-accent);
+    background-color: var(--color-lightgray);
+    padding: unset;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+button.like-panel-button span {
+    display: block;
+}
+
+button.like-panel-button:hover {
+    background-color: var(--color-like-btn-hover);
+}
+
+button#like-panel-yes:focus {
+    background-color: var(--color-secondary);
+}
+
+button#like-panel-yes:focus span {
+    animation: thumbsUp 1s ease 1;
+}
+
+button#like-panel-no:focus {
+    background-color: var(--color-bad);
+}
+
+button#like-panel-no:focus span {
+    animation: thumbsDown 1.25s ease 1;
+}
+
+@keyframes thumbsUp {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    
+    70% {
+        transform: translate(-6px, -8px) rotate(-35deg) scale(1.25);
+    }
+
+    75% {
+        transform: translate(-6px, 0) rotate() scale();
+    }
+
+    80% {
+        transform: translate() rotate() scale(1);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+}
+
+@keyframes thumbsDown {
+    0% {
+        transform: translateY(0);
+    }
+    
+    25% {
+        transform: translateY(5px);
+    }
+
+    50% {
+        transform: translateY(2px);
+    }
+
+    75% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* MEDIA-QUERIES */
+
+@media only screen and (max-width: 900px) {
+    body {
+        grid-template-areas:
+        "nav"
+        "header"
+        "aside"
+        "main"
+        "footer";
+    }
+
+    header h1.offset-heading {
+        bottom: 25%;
+    }
+
+    header h2.small-heading {
+        font-size: 2.5rem;
+        top: 25%;
+        bottom: unset;
+        left: unset;
+        right: unset;
+        z-index: 1;
+    }
+
+    main {
+        margin-top: unset;
+    }
+
+    main section#comments {
+        width: 100%;
+    }
+
+    main > hr {
+        width: 100%;
+    }
+
+    main section article > * {
+        width: 100%;
+    }
+
+    aside {
+        margin: unset;
+        width: 100%;
+        margin-top: 75px;
+        height: fit-content;
+    }
+
+    aside nav.sub-nav {
+        border: none;
+        padding: 35px 75px;
+        width: 100%;
+        position: static;
+        top: unset;
+    }
+
+    aside nav.sub-nav h4 {
+        text-align: center;
+        margin-bottom: 35px;
+        font-size: 1.05rem;
+        text-transform: uppercase;
+        font-family: "Lato Bold";
+    }
+
+    aside nav.sub-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    aside nav.sub-nav ul li {
+        margin: unset;
+        background-color: var(--color-primary);
+        padding: 25px 20px;
+        flex-basis: 25%;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    aside nav.sub-nav ul li a {
+        text-align: center;
+        color: var(--color-white);
+        font-family: "Open Sans SemiBold";
+        text-transform: uppercase;
+        font-size: 0.8rem;
+    }
+
+    aside nav.sub-nav ul li a:hover {
+        color: var(--color-white);
+    }
+
+    aside nav.sub-nav ul li:hover {
+        background-color: var(--color-secondary);
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    main section article.special-placement div.special-placement-block {
+        flex-basis: 100%;
+    }
+
+    main section article.special-placement figure {
+        flex-basis: 100%;
+        margin-left: 0;
+        margin-top: 25px;
+    }
+    
+    aside {
+        margin-top: 110px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    header h1.offset-heading {
+        bottom: 32.5%;
+    }
+
+    header h2.small-heading {
+        font-size: 1.75rem;
+        top: 32.5%;
+    }
+
+    aside nav.sub-nav ul {
+        gap: 15px;
+    }
+
+    aside nav.sub-nav ul li {
+        flex-basis: 100%;
+        padding: 10px 5px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    aside nav.sub-nav {
+        padding: 35px 25px;
+    }
+}

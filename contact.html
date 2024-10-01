@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+    <head>
+        <!-- Title and Icon -->
+        <title>Contact | Geocaching Hobby</title>
+        <link rel="icon" href="assets/images/general/favicon.svg" data-citation="self-made" />
+        
+        <!-- Metadata -->
+        <meta charset="UTF-8" />
+        <meta name="description" content="Contactpagina van de hobby-website over 'Geocaching'." />
+        <meta name="keywords" content="Geocaching,AP,Jonas,Thijs,Hobby" />
+        <meta name="author" content="Jonas Thijs" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/contact.css" />
+    </head>
+    <body>
+        <header>
+            <img src="assets/images/contact/sfeerbeeld.jpg" alt="sfeerbeeld van de contactpagina" class="atmospheric-image" data-citation="free-license" />
+            <h1>contact</h1>
+        </header>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html"><img src="assets/images/general/logo.svg" alt="logo van de website" class="navbar-logo" data-citation="self-made" /></a></li>
+                <li><a href="index.html">home</a></li>
+                <li><a href="hobby.html">geocaching</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+            <form>
+                <input type="search" placeholder="website doorzoeken" />
+            </form>
+        </nav>
+        <main>
+            <section>
+                <h2>Contacteer ons</h2>
+                <p>Zit u met vragen over onze website of wilt u meer weten over geocaching?<br />Heeft u een opmerking of een suggestie over onze website?<br />Laat het hieronder weten en we helpen u graag verder.</p>
+            </section>
+            <section>
+                <form action="#">
+                    <fieldset>
+                        <legend>Uw gegevens</legend>
+                        <div class="input-container first-name">
+                            <label for="contact-first-name">Uw voornaam</label>
+                            <input type="text" name="first-name" id="contact-first-name" placeholder="voer uw voornaam in" required />
+                        </div>
+                        <div class="input-container second-name">
+                            <label for="contact-second-name">Uw familienaam</label>
+                            <input type="text" name="second-name" id="contact-second-name" placeholder="voer uw familienaam in" required />
+                        </div>
+                        <div class="input-container email">
+                            <label for="contact-email">Uw e-mailadres</label>
+                            <input type="email" name="email" id="contact-email" placeholder="voer uw e-mailadres in" required />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Uw bericht</legend>
+                        <div class="input-container reciever">
+                            <label for="contact-reciever">Wie is de ontvanger?</label>
+                            <select name="receiver" id="contact-reciever" required>
+                                <option value="author">Auteur</option>
+                                <option value="webdesigner">Webdesigner</option>
+                            </select>
+                        </div>
+                        <div class="input-container title">
+                            <label for="contact-title">Wat is de titel van uw bericht?</label>
+                            <input type="text" name="title" id="contact-title" placeholder="voer hier de titel in" required />
+                        </div>
+                        <div class="input-container message">
+                            <label for="contact-message">Wat is uw bericht?</label>
+                            <textarea name="message" id="contact-message" placeholder="voer hier uw bericht in..." required></textarea>
+                        </div>
+                    </fieldset>
+                    <input type="submit" name="submit" class="button" id="contact-submit" />
+                </form>
+            </section>
+        </main>
+        <footer>
+            <section class="footer-info">
+                <article>
+                    <h4>Auteur</h4>
+                    <a href="https://jonasthijs.be" target="_blank">Jonas Thijs</a>
+                </article>
+                <article>
+                    <h4>Webdesign</h4>
+                    <a href="https://jonasthijs.be" target="_blank">Jonas Thijs</a>
+                </article>
+                <article>
+                    <h4>Met dank aan</h4>
+                    <a href="https://ap.be" target="_blank">AP Hogeschool</a>
+                </article>
+            </section>
+            <section class="footer-bottom">
+                <h5>&copy; 2022&ensp;&ndash;&ensp;Jonas Thijs&ensp;&ndash;&ensp;G_1PRO_D4&ensp;@&ensp;AP Hogeschool</h5>
+            </section>
+        </footer>
+    </body>
+</html>

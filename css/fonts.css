@@ -1,0 +1,111 @@
+/* 'Lato' font */
+@font-face {
+    font-family: "Lato Black";
+    src: url(../assets/fonts/lato/Lato-Black.ttf);
+}
+
+@font-face {
+    font-family: "Lato Black Italic";
+    src: url(../assets/fonts/lato/Lato-BlackItalic.ttf);
+}
+
+@font-face {
+    font-family: "Lato Bold";
+    src: url(../assets/fonts/lato/Lato-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Lato Bold Italic";
+    src: url(../assets/fonts/lato/Lato-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "Lato Regular";
+    src: url(../assets/fonts/lato/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Lato Italic";
+    src: url(../assets/fonts/lato/Lato-Italic.ttf);
+}
+
+@font-face {
+    font-family: "Lato Light";
+    src: url(../assets/fonts/lato/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: "Lato Light Italic";
+    src: url(../assets/fonts/lato/Lato-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: "Lato Thin";
+    src: url(../assets/fonts/lato/Lato-Thin.ttf);
+}
+
+@font-face {
+    font-family: "Lato Thin Italic";
+    src: url(../assets/fonts/lato/Lato-ThinItalic.ttf);
+}
+
+/* 'Open Sans' font */
+@font-face {
+    font-family: "Open Sans Extra Bold";
+    src: url(../assets/fonts/open_sans/OpenSans-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans Extra Bold Italic";
+    src: url(../assets/fonts/open_sans/OpenSans-ExtraBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans Bold";
+    src: url(../assets/fonts/open_sans/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans Bold Italic";
+    src: url(../assets/fonts/open_sans/OpenSans-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans SemiBold";
+    src: url(../assets/fonts/open_sans/OpenSans-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans SemiBold Italic";
+    src: url(../assets/fonts/open_sans/OpenSans-SemiBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans Medium";
+    src: url(../assets/fonts/open_sans/OpenSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans Medium Italic";
+    src: url(../assets/fonts/open_sans/OpenSans-MediumItalic.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans Regular";
+    src: url(../assets/fonts/open_sans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans Italic";
+    src: url(../assets/fonts/open_sans/OpenSans-Italic.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans Light";
+    src: url(../assets/fonts/open_sans/OpenSans-Light.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans Light Italic";
+    src: url(../assets/fonts/open_sans/OpenSans-LightItalic.ttf);
+}

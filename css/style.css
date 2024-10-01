@@ -1,0 +1,667 @@
+/* SETTING UP VARIABLES FOR THE STYLES OF THE DOCUMENT */
+:root {
+    --color-primary: #8FBC8F;
+    --color-secondary: #93C573;
+    --color-accent: #7A682E;
+    --color-white: white;
+    --color-black: #111111;
+    --color-lightgray: #EFEFEF;
+    --color-lightgray-opacity: rgba(239, 239, 239, 0.5);
+    --color-shadow: #000000;
+}
+
+/* GLOBAL STYLE STYLE SETTINGS */
+h1 {
+    font-family: "Lato Bold";
+    font-size: 5rem;
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: "Lato Bold";
+    font-size: 2.5rem;
+    color: var(--color-primary);
+}
+
+h3 {
+    font-family: "Lato Bold";
+    font-size: 1.5rem;
+    letter-spacing: 1pt;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+}
+
+h4 {
+    font-family: "Lato Bold";
+    font-size: 1rem;
+    letter-spacing: 0.5pt;
+}
+
+h5 {
+    font-family: "Lato Regular";
+    font-size: 0.75rem;
+}
+
+img {
+    border-radius: 12px;
+    color: var(--color-black);
+    font-family: "Open Sans Italic";
+    font-size: 0.9rem;
+}
+
+figure figcaption {
+    font-family: "Open Sans Italic";
+    font-size: 0.8rem;
+    text-align: right;
+    color: var(--color-accent);
+    margin-top: 7.5pt;
+    margin-right: 7.5px;
+}
+
+figure figcaption a {
+    color: inherit;
+    text-decoration: none;
+}
+
+figure figcaption a:hover {
+    text-decoration: underline;
+}
+
+figure figcaption a:active {
+    color: var(--color-secondary);
+}
+
+div.text-block p {
+    margin: 10pt 0;
+}
+
+p {
+    font-family: "Open Sans Regular";
+    line-height: 17.5pt;
+    color: var(--color-black);
+}
+
+abbr {
+    cursor: help;
+}
+
+ul {
+    list-style-type: "\2022\2002";
+}
+
+ul li {
+    font-family: "Open Sans Regular";
+    font-size: 0.9rem;
+    margin: 6.25pt 0 6.25pt 15px;
+    line-height: 13pt;
+}
+
+/* INPUT FIELDS */
+
+legend {
+    font-family: "Lato Bold";
+    font-size: 1.5rem;
+    letter-spacing: 1pt;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    padding: 0 15px;
+}
+
+fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 35px;
+    border-top: 1px solid var(--color-secondary);
+    gap: 50px;
+}
+
+fieldset div.input-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 15px;
+}
+
+fieldset div.input-container > * {
+    flex-basis: 100%;
+}
+
+label {
+    font-family: "Open Sans Regular";
+    font-size: 0.95rem;
+    margin-bottom: 7.5pt;
+}
+
+select, option {
+    cursor: pointer;
+}
+
+input,
+input::placeholder,
+.button,
+select,
+option,
+textarea {
+    font-family: "Open Sans Light";
+    font-size: 0.8rem;
+}
+
+input,
+.button,
+select,
+option,
+textarea {
+    padding: 5px 7.5px;
+    color: var(--color-accent);
+    background-color: var(--color-lightgray);
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 5px;
+    transition: border 0.25s;
+}
+
+input:focus,
+select:focus,
+option:focus,
+textarea:focus {
+    border-color: var(--color-accent);
+}
+
+input:hover,
+select:hover,
+option:hover,
+textarea:hover {
+    border-color: var(--color-accent);
+}
+
+textarea {
+    height: 150px;
+    width: 100%;
+}
+
+.button {
+    flex-basis: 100%;
+    margin-left: 50px;
+    margin-right: 35px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transition: background-color 0.25s;
+    cursor: pointer;
+    font-family: "Open Sans Bold";
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5pt;
+}
+
+.button:hover {
+    background-color: var(--color-secondary);
+}
+
+.button:active {
+    background-color: var(--color-accent);
+}
+
+/* QUOTES */
+
+main section article blockquote {
+    flex-basis: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+blockquote q {
+    quotes: "\201C" "\201D";
+    font-family: "Open Sans Light";
+    font-size: 0.9rem;
+    border-left: 1px solid var(--color-accent);
+    padding-left: 15pt;
+}
+
+blockquote p.author {
+    font-family: "Open Sans Italic";
+    font-size: 0.9rem;
+    margin-top: 5pt;
+    margin-left: 25px;
+}
+
+/* DEFENITION LIST */
+
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+dl.list-with-intro {
+    margin-top: 30px;
+}
+
+dl dt {
+    font-family: "Open Sans SemiBold";
+    font-size: 0.9rem;
+}
+
+dl dd {
+    margin-left: 20px;
+    font-family: "Open Sans Regular";
+    font-size: 0.85rem;
+    line-height: 13pt;
+}
+
+/* TABLE */
+
+table {
+    margin-top: 30px;
+}
+
+table caption {
+    font-family: "Open Sans Italic";
+    font-size: 0.8rem;
+    text-align: left;
+    margin-bottom: 15px;
+    color: var(--color-accent);
+}
+
+table thead th {
+    border-bottom: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+table tbody th, table tbody td {
+    border-bottom: 1px solid var(--color-secondary);
+    line-height: 12.5pt;
+}
+
+table tbody th {
+    color: var(--color-accent);
+}
+
+table tbody tr:last-child th, table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+table th {
+    padding: 15px;
+    font-family: "Open Sans SemiBold";
+    font-size: 0.9rem;
+}
+
+table td {
+    padding: 15px;
+    font-family: "Open Sans Regular";
+    font-size: 0.9rem;
+}
+
+/* LAY-OUT */
+
+body {
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+
+header {
+    grid-area: header;
+    width: inherit;
+    height: 300px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+header img.atmospheric-image {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+header h1 {
+    position: absolute;
+    left: 75px;
+    bottom: 45px;
+    text-shadow: 0 0 25px var(--color-shadow);
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    width: inherit;
+    border-top: 4px solid var(--color-primary);
+    background: var(--color-white);
+    padding: 0 75px;
+    box-sizing: border-box;
+}
+
+nav ul.main-nav {
+    display: flex;
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 65px;
+}
+
+nav ul.main-nav li {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul.main-nav li a {
+    text-decoration: none;
+    font-family: "Open Sans SemiBold";
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    transition: color 0.25s;
+}
+
+nav ul.main-nav li a:hover {
+    color: var(--color-accent);
+}
+
+nav ul.main-nav li:first-child {
+    margin-right: -15px;
+}
+
+nav ul.main-nav li:first-child a {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul.main-nav li:first-child a img.navbar-logo {
+    height: 85%;
+}
+
+nav form {
+    flex-basis: 40%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav form input {
+    height: 32px;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 0;
+    width: 141px;
+    font-family: "Open Sans Light";
+    color: var(--color-accent);
+    border: none;
+    border-bottom: 2px solid var(--color-primary);
+    transition: none;
+    outline: none;
+}
+
+nav form input::placeholder {
+    color: var(--color-primary);
+    font-family: "Open Sans Regular";
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    overflow: visible;
+    position: absolute;
+    right: 0;
+    top: 25%;
+}
+
+nav form input:hover {
+    border-color: var(--color-accent);
+    border-width: 1px;
+}
+
+nav form input:hover::placeholder {
+    color: var(--color-accent);
+}
+
+nav form input:focus {
+    border-color: var(--color-accent);
+    border-width: 1px;
+}
+
+nav form input:focus::placeholder {
+    color: var(--color-accent);
+}
+
+main {
+    grid-area: main;
+    width: inherit;
+    padding: 75px 75px 100px 75px;
+    box-sizing: border-box;
+}
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+main section h2 {
+    flex-basis: 100%;
+    margin-bottom: 30pt;
+    align-self: auto;
+}
+
+main section div.article-block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 75px;
+}
+
+main section div.article-block article h3 {
+    margin-bottom: 15pt;
+}
+
+main section div.article-block article div.text-block p:first-child {
+    margin-top: 0;
+}
+
+main section div.article-block article div.text-block p:last-child {
+    margin-bottom: 0;
+}
+
+footer {
+    grid-area: footer;
+    width: inherit;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+footer section {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15vw;
+    padding: 60px;
+    background-color: var(--color-primary);
+}
+
+footer section article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 10vw;
+}
+
+footer section article h4 {
+    text-transform: uppercase;
+    text-decoration: 2px underline;
+    text-underline-position: below;
+    text-underline-offset: 3px;
+    flex-basis: 100%;
+    margin-bottom: 10px;
+    color: var(--color-white);
+    text-align: center;
+}
+
+footer section article a {
+    flex-basis: 100%;
+    text-decoration: none;
+    font-family: "Open Sans Regular";
+    font-size: 0.8rem;
+    color: var(--color-black);
+    text-align: center;
+}
+
+footer section.footer-bottom {
+    background-color: var(--color-accent);
+    padding: 15px;
+}
+
+footer section.footer-bottom h5 {
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-white);
+}
+
+/* MEDIA-QUERIES */
+
+@media only screen and (max-width: 1050px) {
+    footer section.footer-info > * {
+        width: fit-content;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        grid-template-areas:
+        "nav"
+        "header"
+        "main"
+        "footer";
+    }
+
+    body > nav {
+        position: fixed;
+        border-top: none;
+        justify-content: space-evenly;
+        padding: 0;
+        border-bottom: 4px solid var(--color-primary);
+    }
+
+    nav ul.main-nav {
+        width: 100%;
+        gap: unset;
+        justify-content: space-evenly;
+    }
+
+    body > nav form {
+        justify-content: center;
+    }
+
+    header {
+        top: 75px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 3.5rem;
+        top: unset;
+        bottom: unset;
+        left: unset;
+        right: unset;
+    }
+
+    main {
+        margin-top: 75px;
+    }
+
+    footer section.footer-info {
+        gap: unset;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    body > nav {
+        height: 110px;
+        flex-wrap: wrap;
+    }
+
+    nav ul.main-nav {
+        height: 60px;
+    }
+
+    nav ul.main-nav li {
+        margin: 0;
+    }
+
+    body > nav form {
+        height: 50px;
+    }
+
+    body > nav form input[type="search"] {
+        align-self: flex-end;
+        position: absolute;
+        bottom: 4px;
+        border: 0;
+    }
+
+    header {
+        top: 110px;
+    }
+
+    main {
+        margin-top: 110px;
+    }
+
+    table th,
+    table td {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    footer section.footer-info {
+        flex-wrap: wrap;
+        justify-content: unset;
+        gap: 50px;
+    }
+
+    footer section.footer-info article {
+        flex-basis: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    main {
+        padding: 25px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    table th,
+    table td {
+        padding: 5px;
+        width: 0;
+        font-size: 0.75rem;
+    }
+}

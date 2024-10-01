@@ -1,0 +1,124 @@
+/* PAGE-SPECIFIC STYLES FOR 'contact.html' */
+
+:root {
+    --color-shadow: #AAAAAA;
+}
+
+main section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+main section:first-of-type {
+    margin-bottom: 50px;
+}
+
+main section > * {
+    flex-basis: 60%;
+}
+
+main section form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+input#contact-submit:hover {
+    border-color: transparent;
+}
+
+input#contact-submit:focus {
+    border-color: transparent;
+}
+
+fieldset:first-of-type div.first-name,
+fieldset:first-of-type div.second-name {
+    flex-basis: 40%;
+}
+
+fieldset:first-of-type div.email {
+    flex-basis: 100%;
+}
+
+
+fieldset:last-of-type div.reciever {
+    flex-basis: 25%;
+}
+
+fieldset:last-of-type div.title {
+    flex-basis: 60%;
+}
+
+fieldset:last-of-type div.message {
+    flex-basis: 100%;
+}
+
+/* MEDIA-QUERIES */
+
+@media only screen and (max-width: 1256px) {
+    fieldset:last-of-type div.reciever,
+    fieldset:last-of-type div.title {
+        flex-basis: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 936px) {
+    section:first-child > p {
+        flex-basis: 100%;
+    }
+
+    main section form {
+        flex-basis: 100%;
+    }
+
+    fieldset:last-of-type div.reciever {
+        flex-basis: 25% !important;
+    }
+    
+    fieldset:last-of-type div.title {
+        flex-basis: 60% !important;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    fieldset:last-of-type div.reciever,
+    fieldset:last-of-type div.title {
+        flex-basis: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 638px) {
+    legend {
+        text-align: center;
+    }
+
+    fieldset div.input-container {
+        margin: unset;
+    }
+    
+    input#contact-submit {
+        margin-left: 35px;
+    }
+
+    fieldset:last-of-type {
+        padding-bottom: unset;
+    }
+    
+    fieldset:first-of-type div.first-name,
+    fieldset:first-of-type div.second-name {
+        flex-basis: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    fieldset {
+        padding: 35px 0;
+    }
+    
+    input#contact-submit {
+        margin: unset;
+    }
+}

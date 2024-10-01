@@ -1,0 +1,62 @@
+/* PAGE-SPECIFIC STYLES FOR 'index.html' */
+
+main section article {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 100px;
+}
+
+main section article h3 {
+    flex-basis: 100%;
+}
+
+main section article div.text-block {
+    flex-basis: 60%;
+    max-width: 600px;
+}
+
+main section article figure {
+    flex-basis: 20%;
+}
+
+main section article figure img {
+    width: 100%;
+}
+
+main section article figure#img-of-jonas-thijs img {
+    object-fit: cover;
+    height: 75%;
+}
+
+/* MEDIA-QUERIES */
+
+@media only screen and (max-width: 900px) {    
+    main section article > * {
+        flex-basis: 100% !important;
+        max-width: unset !important;
+    }
+
+    main section article figure {
+        margin-top: 25px;
+        width: 50%;
+    }
+
+    main section article figure img {
+        width: inherit;
+    }
+
+    main section article figure#img-of-jonas-thijs img {
+        height: 100%;
+    }
+    
+    main section article figure figcaption {
+        width: inherit;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    main section article figure {
+        margin-top: 25px;
+        width: 100%;
+    }
+}

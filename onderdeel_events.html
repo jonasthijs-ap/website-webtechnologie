@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+    <head>
+        <!-- Title and Icon -->
+        <title>Events | Geocaching Hobby</title>
+        <link rel="icon" href="assets/images/general/favicon.svg" data-citation="self-made" />
+        
+        <!-- Metadata -->
+        <meta charset="UTF-8" />
+        <meta name="description" content="Wat zijn geocaching events en welke soorten events zijn er? Kijk het hier na." />
+        <meta name="keywords" content="Geocaching,AP,Jonas,Thijs,Hobby" />
+        <meta name="author" content="Jonas Thijs" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Libraries -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />   <!-- LEAFLET.CSS -->
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" defer></script>       <!-- LEAFLET.JS -->
+        
+        <!-- CSS Stylesheets -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/onderdelen.css" />
+
+        <!-- Scripts -->
+        <script src="js/leaflet-map-events.js" defer></script>
+        <script src="js/comments.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <img src="assets/images/onderdeel_events/sfeerbeeld.jpg" alt="sfeerbeeld van de onderdeel-pagina over events" class="atmospheric-image" data-citation="yes" data-source-ref="https://thegeocachingjunkie.com/2015/12/26/the-big-event-the-best-geocaching-events-in-ireland-in-2015/" />
+            <h1>events</h1>
+        </header>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="index.html"><img src="assets/images/general/logo.svg" alt="logo van de website" class="navbar-logo" data-citation="self-made" /></a></li>
+                <li><a href="index.html">home</a></li>
+                <li><a href="hobby.html">geocaching</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+            <form>
+                <input type="search" placeholder="website doorzoeken" />
+            </form>
+        </nav>
+        <main>
+            <section>
+                <h2>Wat zijn event-caches?</h2>
+                <div class="article-block">
+                    <article>
+                        <p>Een event-cache is een bijeenkomst van verschillende geocachers. Dit kan een lokale community zijn maar geldt ook voor erg grote bijeenkomsten. Het kan gaan om een gewone meet-and-greet maar het kan ook zijn dat er verschillende dingen te doen zijn en dat er trackables te verzamelen zijn. Soms worden er wandelingen georganiseerd of nieuwe geocaches geïntroduceerd.</p>
+                    </article>
+                    <article>
+                        <h3>Soorten event-caches</h3>
+                        <p>Er zijn uiteraard veel soorten event-caches, maar dit zijn de meest gangbare soorten:</p>
+                        <dl class="list-with-intro">
+                            <div class="def-group">
+                                <dt>Event-cache</dt>
+                                <dd>Dit is het standaard event-cachetype. Ze zijn kleinschalig en worden vaak georganiseerd om meet-and-greets te organiseren of kleine bijeenkomsten met soms een hapje en een drankje. Dit soort events kunnen worden georganiseerd door individuele geocachers of door geocachingorganisaties.</dd>
+                            </div>
+                            <div class="def-group">
+                                <dt>Mega-event</dt>
+                                <dd>Dit soort event-cachetype is grootschaliger dan een regulier event, dit omdat het vaak meer dan 500 bezoekers lokt. Hier worden vaak leuke activiteiten georganiseerd en loopt soms ook over meerdere dagen (vaak via een dagprogramma). Dit soort event-cachetype trekt bezoekers vanuit de hele wereld. Dit soort events keert vaak jaarlijks terug.</dd>
+                            </div>
+                            <div class="def-group">
+                                <dt>Giga-event</dt>
+                                <dd>Dit soort event is vergelijkbaar met een Mega-event, alleen is een Giga-event nóg grootschaliger dan dan een Mega-event. Hier komen zo'n 5000 bezoekers op af van over de hele wereld. Hiernaast zijn ze uiterst zeldzaam, wat het nóg aantrekkelijker maakt voor internationale bezoekers. Ook dit soort events heeft vaak een dagprogramma met leuke activiteiten, dat over meerdere dagen loopt en keert vaak jaarlijks terug.</dd>
+                            </div>
+                            <div class="def-group">
+                                <dt>CITO-event</dt>
+                                <dd>Een <abbr title="Cache In Trash Out">CITO</abbr>-event heeft als bedoeling dat de deelnemers tijdens het evenement zwerfvuil oprapen en verzamelen. Het eerste deel van de naam: &rsquo;Cache In&lsquo; refereert naar &ldquo;het innen, of logischer: vinden van caches&rdquo;. Het achterste deel van de naam: &lsquo;Trash Out&rsquo; refereert naar &ldquo;het wegnemen van (zwerf)vuil&rdquo;.</dd>
+                            </div>
+                        </dl>
+                        <div id="eventsMap" class="leaflet-map"></div>
+                        <figure>
+                            <img src="assets/images/onderdeel_events/cito_event.jpg" alt="foto van een CITO-event" data-citation="yes" data-source-ref="https://www.geocaching.com/blog/2015/07/12-tips-for-hosting-a-geocaching-event/" />
+                            <figcaption>CITO-event</figcaption>
+                        </figure>
+                    </article>
+                </div>
+            </section>
+            <hr />
+            <section id="comments">
+                <h2>Geef uw opmerkingen</h2>
+                <form id="comment-form">
+                    <input type="text" placeholder="gebruikersnaam" />
+                    <input type="email" placeholder="e-mailadres" />
+                    <textarea placeholder="typ hier uw opmerking..."></textarea>
+                    <button id="publish" class="button small">Publiceren</button>
+                    <p id="error-message"></p>
+                </form>
+            </section>
+        </main>
+        <aside>
+            <nav class="sub-nav">
+                <h4>Onderdeel-pagina's</h4>
+                <ul>
+                    <li><a href="onderdeel_wat-zijn-geocaches.html">Wat zijn geocaches?</a></li>
+                    <li><a href="onderdeel_trackables.html">Trackables</a></li>
+                    <li><a href="onderdeel_events.html">Events</a></li>
+                    <li><a href="onderdeel_manieren-om-te-geocachen.html">Manieren om te geocachen</a></li>
+                    <li><a href="onderdeel_toebehoren.html">Toebehoren bij het geocachen</a></li>
+                    <li><a href="onderdeel_shop.html">Webshop</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <footer>
+            <section class="like-panel">
+                <h5>Vind je deze pagina leuk? <button class="like-panel-button" id="like-panel-yes"><span>👍</span></button><button class="like-panel-button" id="like-panel-no"><span>👎</span></button></h5>
+            </section>
+            <section class="footer-info">
+                <article>
+                    <h4>Auteur</h4>
+                    <a href="https://jonasthijs.be" target="_blank">Jonas Thijs</a>
+                </article>
+                <article>
+                    <h4>Webdesign</h4>
+                    <a href="https://jonasthijs.be" target="_blank">Jonas Thijs</a>
+                </article>
+                <article>
+                    <h4>Met dank aan</h4>
+                    <a href="https://ap.be" target="_blank">AP Hogeschool</a>
+                </article>
+            </section>
+            <section class="footer-bottom">
+                <h5>&copy; 2022&ensp;&ndash;&ensp;Jonas Thijs&ensp;&ndash;&ensp;G_1PRO_D4&ensp;@&ensp;AP Hogeschool</h5>
+            </section>
+        </footer>
+    </body>
+</html>
